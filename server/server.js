@@ -2,7 +2,7 @@ import "@babel/polyfill";
 import dotenv from "dotenv";
 import "isomorphic-fetch";
 import createShopifyAuth, { verifyRequest } from "@shopify/koa-shopify-auth";
-import Shopify, { ApiVersion } from "@shopify/shopify-api";
+import Shopify, { ApiVersion, DataType } from "@shopify/shopify-api";
 import Koa from "koa";
 import next from "next";
 import Router from "koa-router";
@@ -68,6 +68,25 @@ app.prepare().then(async () => {
     ctx.respond = false;
     ctx.res.statusCode = 200;
   };
+  // const { shop, accessToken, scope } = Koa.Context.state.shopify;
+  //////For scriptTags in shopify.
+
+  // const client = new Shopify.Clients.Rest(
+  //   "kadwey-store-new.myshopify.com",
+  //   "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"
+  // );
+  // const data = await client.post({
+  //   path: "script_tags",
+  //   data: {
+  //     script_tag: {
+  //       event: "onload",
+  //       src: "https://0a78-103-76-254-98.ngrok.io/scripts/firstScript.js",
+  //     },
+  //   },
+  //   type: DataType.JSON,
+  // });
+
+  /////////////////////////
 
   router.post("/webhooks", async (ctx) => {
     try {

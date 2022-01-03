@@ -1,6 +1,6 @@
 import { Heading, Page } from "@shopify/polaris";
-import NavigationTopBar from "../components/topBar";
-import FittedTabsExample from "../components/topTab";
+import NavigationTopBar from "../components/Topbar";
+import FittedTabsExample from "../components/TopTab";
 import FirstPageFrameLayout from "../Layout/BolierPage";
 
 const Index = () => (
