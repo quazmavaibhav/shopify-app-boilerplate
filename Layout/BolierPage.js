@@ -32,7 +32,7 @@ import {
   HomeMajor,
   OrdersMajor,
 } from "@shopify/polaris-icons";
-import FittedTabsExample from "../components/TopTab";
+import FittedTabsExample from "../components/Toptab";
 
 export default function FirstPageFrameLayout() {
   const defaultState = useRef({
